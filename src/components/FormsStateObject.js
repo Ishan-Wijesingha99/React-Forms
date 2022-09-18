@@ -12,7 +12,8 @@ export const FormWithManyFields = function() {
         email: '',
         comments: '',
         isFriendly: false,
-        employment: ''
+        employment: '',
+        favColour: ''
     })
 
     console.log(inputObject)
@@ -113,6 +114,32 @@ export const FormWithManyFields = function() {
                 />
                 <label htmlFor="full-time">Full-time</label>
                 <br />
+
+
+                {/* select options */}
+                <label htmlFor="favColor">What is your favorite color?</label>
+                <br />
+                <select 
+                    id="favColor"
+                    onChange={handleInputChange}
+                    value={inputObject.favColour}
+                    name="favColor"
+                >
+                    <option value="">-- Choose --</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="indigo">Indigo</option>
+                    <option value="violet">Violet</option>
+                </select>
+                
+
+                {/* submitting a form */}
+                
+
+
             </fieldset>
         </form>
     )
