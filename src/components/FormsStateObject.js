@@ -29,8 +29,18 @@ export const FormWithManyFields = function() {
 
     }
 
+    const handleSubmit = function(event) {
+        // prevent reloading of the page
+        event.preventDefault()
+
+        // this is the function that handles the submitting of the form information to the backend
+        // usually a fetch POST request
+    }
+
+
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="First Name"
@@ -113,34 +123,32 @@ export const FormWithManyFields = function() {
                     checked={inputObject.employment === 'full-time'}
                 />
                 <label htmlFor="full-time">Full-time</label>
-                <br />
-
-
-                {/* select options */}
-                <label htmlFor="favColor">What is your favorite color?</label>
-                <br />
-                <select 
-                    id="favColor"
-                    onChange={handleInputChange}
-                    value={inputObject.favColour}
-                    name="favColor"
-                >
-                    <option value="">-- Choose --</option>
-                    <option value="red">Red</option>
-                    <option value="orange">Orange</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="indigo">Indigo</option>
-                    <option value="violet">Violet</option>
-                </select>
-                
-
-                {/* submitting a form */}
-                
-
-
             </fieldset>
+
+            {/* select options */}
+            <label htmlFor="favColor">What is your favorite color?</label>
+            <br />
+            <select 
+                id="favColour"
+                value={inputObject.favColour}
+                onChange={handleInputChange}
+                name="favColour"
+            >
+                <option value="">-- Choose --</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="indigo">Indigo</option>
+                <option value="violet">Violet</option>
+            </select>
+            
+
+            {/* submitting a form */}
+            <br />
+            <br />
+            <button type="submit">Submit</button>
         </form>
     )
 }
