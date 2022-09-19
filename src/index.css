@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.signup-form-container {
+    background-color: rgb(172, 70, 172);
+    width: 60%;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#signup-email, #signup-password, #signup-confirm-password, #join-newsletter, #signup-button {
+   margin: 10px;
+   padding: 10px;
+   border: 2px solid black;
+   border-radius: 5px;
+}
+
+#signup-button {
+    margin-left: 72px;
+    margin-right: 72px;
+}
